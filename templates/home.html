@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gen Z Course Selector</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('/static/background.png') no-repeat center center fixed;
+      opacity: 200;
+      z-index: -2;
+      background-size: 1780px 800px;;
+      color: rgb(249, 246, 238);
+      position: relative;
+      min-height: 100vh;
+      
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4); /* dark translucent layer */
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      color: rgb(249, 246, 238);
+      flex-wrap: wrap;
+    }
+
+    .text-left {
+      flex: 1;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.6;
+      color: #111;
+      text-shadow: 1px 1px #eee;
+      color: rgb(249, 246, 238);
+      text-shadow: 2px 2px 5px #000; /* black shadow to pop out */
+    }
+
+    .courses {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      color: rgb(249, 246, 238);
+    }
+
+    .course-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-shadow: 2px 2px 5px #000; /* black shadow to pop out */
+      color: rgb(249, 246, 238);
+      
+    }
+
+    .course-item img {
+      width: 200px;
+      height: 120px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .course-item img:hover {
+      transform: scale(1.1);
+    }
+
+    .course-item span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: rgb(249, 246, 238);
+      text-shadow: 2px 2px 5px #000; /* black shadow to pop out */
+
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .course-item {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-left">
+      <p><strong>Sidhi Baat No Bakwas.</strong></p>
+      <p>Is semester pass <em>hona</em> hai?</p>
+      <p>To course select <em>kar...</em></p>
+    </div>
+    <div class="courses">
+      <div class="course-item">
+        <a href="eco.html"><img src="/static/eco.png" alt="Eco Hons"></a>
+        <span>ECO HONS.</span>
+      </div>
+      <div class="course-item">
+        <a href="bcom.html"><img src="/static/bcom.png" alt="BCom Hons"></a>
+        <span>B.COM HONS.</span>
+      </div>
+      <div class="course-item">
+        <a href="bms.html"><img src="/static/bms.png" alt="BMS"></a>
+        <span>BMS</span>
+      </div>
+      <div class="course-item">
+        <a href="bba.html"><img src="/static/bba.png" alt="BBA"></a>
+        <span>BBA-FIA</span>
+      </div>
+      <div class="course-item">
+        <a href="pol.html"><img src="/static/pol.png" alt="Pol Sci Hons"></a>
+        <span>POL SCI. HONS.</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

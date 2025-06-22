@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eco Hons | Gen Z Course Guide</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('/static/background.png') no-repeat center center fixed;
+      background-size: 1780px 800px;;
+      color: #fff;
+      position: relative;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* dark layer for contrast */
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .subjects, .description {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .subjects h2, .description h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .subjects h3 {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      padding-left: 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .subjects, .description {
+        text-align: center;
+      }
+    }
+    a:link {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: mintcream;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"> 
+    <div class="subjects">
+      <h2>SUBJECTS</h2>
+      <h3>SEMESTER - I</h3>
+      <ul>
+        <li> <a href="{{ url_for('login', subject='fin1bba') }}">Financial Accounting & Analysis</a></li>
+        <li> <a href="{{ url_for('login', subject='bus1bba') }}">Microeconomics</a></li>
+        <li> <a href="{{ url_for('login', subject='sta1bba') }}">Statistics for Business Decisions</a></li>
+      </ul>
+
+      <h3>SEMESTER - II</h3>
+      <ul>
+        <li> <a href="{{ url_for('login', subject='cor2bba') }}"> Cost and Management Accounting </a> </li> 
+        <li> <a href="{{ url_for('login', subject='mac2bba') }}">Macroeconomics</a></li>
+        <li> <a href="{{ url_for('login', subject='qua2bba') }}">Quantitative Techniques</a></li>
+      </ul>
+
+      <p><strong>MORE COMING SOON~</strong></p>
+    </div>
+
+    <div class="description">
+      <h2>DESCRIPTION</h2>
+      <p><em>Dekh bhai per subject charge 150/- hai jisme tujhe:</em></p>
+      <ol>
+        <li>2 Past Year With Solutions</li>
+        <li>Important Notes</li>
+        <li>Cheating <strong>Sheating</strong> Sheet 😉</li>
+      </ol>
+      <p>
+        Ab tu sochega ye cheating sheating sheet hai ky? <br>
+        Ye kuch important questions hai jo... <strong>baki tu smjhdaar hai.🫣</strong>
+      </p>
+      <p>
+        Interested ho to <strong>9599191182</strong> is no. <br>
+        Pr payment, screenshot aur subject ka naam likh kr bhej de. <br>
+        1 ghante ke andar andar Login credentials tujhe mil jayenge...
+      </p>
+      <p><strong>GOOD LUCK. MERE YAAR, TU KR LEGA~</strong></p>
+    </div>
+  </div>
+</body>
+</html>

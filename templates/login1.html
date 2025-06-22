@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('/static/background.png') no-repeat center center fixed;
+      background-size: 1780px 800px;
+      color: #fff;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .login-box button {
+      width: 103.5%;
+      padding: 12px;
+      background-color: #9b5de5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background-color: #7a40c2;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <form method="post">
+      <input type="text" name="username" placeholder="Username" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+
+      <input type="hidden" name="subject" value="{{ subject }}">  <!-- dynamically change this -->
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

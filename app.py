@@ -55,6 +55,9 @@ def pol():
 @app.route('/bms.html', methods=['GET', 'POST'])
 def bms():
     return render_template('bms.html')
+@app.route('/timewaste.html', methods=['GET', 'POST'])
+def tmw():
+    return render_template('timewaste.html')
     
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

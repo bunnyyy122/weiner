@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microeconomics Resources</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('/static/background.png') no-repeat center center fixed;
+      background-size: 1780px 800px;
+      color: rgb(249, 246, 238);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .section {
+      flex: 1 1 45%;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    a {
+      color: #ffdf6c;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      font-weight: bold;
+      background-color: #6b46c1;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 1px 1px 6px #000;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #9f7aea;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .section {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h2>PAST YEAR QUESTION PAPER</h2>
+      <ul>
+        <li><strong>QP-1</strong><br>(<a href="/static/qps/pro1qp1.pdf" target="_blank">Download PDF</a>)</li>
+        <li><strong>QP-2</strong><br>(<a href="/static/qps/pro1qp2.pdf" target="_blank">Download PDF</a>)</li>
+        <li><strong>SOL-1</strong><br>(<a href="/static/solutions/micro1sol1.pdf" target="_blank">Download Solution</a>)</li>
+        <li><strong>SOL-2</strong><br>(<a href="/static/solutions/micro1sol2.pdf" target="_blank">Download Solution</a>)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>IMPORTANT NOTES</h2>
+      <ul>
+        <li>(<a href="/static/notes/micro_notes.pdf" target="_blank">Download Notes</a>)</li>
+      </ul>
+
+      <h2>CHEATING SHEATING SHEET</h2>
+      <p>
+        <a href="https://example.com/cheating-sheet" class="btn" target="_blank">Click here</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

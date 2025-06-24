@@ -44,17 +44,17 @@ def eco():
 def bcom():
     return render_template('bcom.html')
     
-@app.route('/bba.html', methods=['GET', 'POST'])
+@app.route('/phy.html', methods=['GET', 'POST'])
 def bba():
-    return render_template('bba.html')
+    return render_template('phy.html')
 
 @app.route('/pol.html', methods=['GET', 'POST'])
 def pol():
     return render_template('pol.html')
 
-@app.route('/bms.html', methods=['GET', 'POST'])
+@app.route('/mat.html', methods=['GET', 'POST'])
 def bms():
-    return render_template('bms.html')
+    return render_template('mat.html')
 @app.route('/timewaste.html', methods=['GET', 'POST'])
 def tmw():
     return render_template('timewaste.html')

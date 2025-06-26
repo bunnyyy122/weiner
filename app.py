@@ -58,6 +58,10 @@ def bms():
 @app.route('/timewaste.html', methods=['GET', 'POST'])
 def tmw():
     return render_template('timewaste.html')
+
+@app.route('/syllabus.html', methods=['GET', 'POST'])
+def syl():
+    return render_template('syllabus.html')
     
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

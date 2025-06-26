@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syllabus</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('/static/background.png') no-repeat center center fixed;
+      background-size: 1780px 800px;;
+      color: #000;
+    }
+
+    .syllabus-container {
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .column {
+      background: rgba(245, 245, 220, 0.8);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      width: 220px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .column:hover {
+      transform: translateY(-5px);
+    }
+
+    .column h3 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      text-decoration: underline;
+    }
+
+    .semester-link {
+      display: block;
+      margin: 12px 0;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease;
+    }
+
+    .semester-link:hover {
+      color: #9b5de5;
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      .syllabus-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .column {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="syllabus-container">
+    <div class="column">
+      <h3>ECO HONS:-</h3>
+      <a class="semester-link" href="/pdfs/eco1.pdf" download>SEMESTER I</a>
+      <a class="semester-link" href="/pdfs/eco2.pdf" download>SEMESTER II</a>
+      <a class="semester-link" href="/pdfs/eco3.pdf" download>SEMESTER III</a>
+      <a class="semester-link" href="/pdfs/eco4.pdf" download>SEMESTER IV</a>
+      <a class="semester-link" href="/pdfs/eco5.pdf" download>SEMESTER V</a>
+      <a class="semester-link" href="/pdfs/eco6.pdf" download>SEMESTER VI</a>
+    </div>
+
+    <div class="column">
+      <h3>BCOM HONS:-</h3>
+      <a class="semester-link" href="/pdfs/bcom1.pdf" download>SEMESTER I</a>
+      <a class="semester-link" href="/pdfs/bcom2.pdf" download>SEMESTER II</a>
+      <a class="semester-link" href="/pdfs/bcom3.pdf" download>SEMESTER III</a>
+      <a class="semester-link" href="/pdfs/bcom4.pdf" download>SEMESTER IV</a>
+      <a class="semester-link" href="/pdfs/bcom5.pdf" download>SEMESTER V</a>
+      <a class="semester-link" href="/pdfs/bcom6.pdf" download>SEMESTER VI</a>
+    </div>
+
+    <div class="column">
+      <h3>PHYSICS HONS:-</h3>
+      <a class="semester-link" href="/pdfs/physics1.pdf" download>SEMESTER I</a>
+      <a class="semester-link" href="/pdfs/physics2.pdf" download>SEMESTER II</a>
+      <a class="semester-link" href="/pdfs/physics3.pdf" download>SEMESTER III</a>
+      <a class="semester-link" href="/pdfs/physics4.pdf" download>SEMESTER IV</a>
+      <a class="semester-link" href="/pdfs/physics5.pdf" download>SEMESTER V</a>
+      <a class="semester-link" href="/pdfs/physics6.pdf" download>SEMESTER VI</a>
+    </div>
+
+    <div class="column">
+      <h3>MATHS HONS:-</h3>
+      <a class="semester-link" href="/pdfs/maths1.pdf" download>SEMESTER I</a>
+      <a class="semester-link" href="/pdfs/maths2.pdf" download>SEMESTER II</a>
+      <a class="semester-link" href="/pdfs/maths3.pdf" download>SEMESTER III</a>
+      <a class="semester-link" href="/pdfs/maths4.pdf" download>SEMESTER IV</a>
+      <a class="semester-link" href="/pdfs/maths5.pdf" download>SEMESTER V</a>
+      <a class="semester-link" href="/pdfs/maths6.pdf" download>SEMESTER VI</a>
+    </div>
+
+    <div class="column">
+      <h3>POL.SCI HONS:-</h3>
+      <a class="semester-link" href="/pdfs/polsci1.pdf" download>SEMESTER I</a>
+      <a class="semester-link" href="/pdfs/polsci2.pdf" download>SEMESTER II</a>
+      <a class="semester-link" href="/pdfs/polsci3.pdf" download>SEMESTER III</a>
+      <a class="semester-link" href="/pdfs/polsci4.pdf" download>SEMESTER IV</a>
+      <a class="semester-link" href="/pdfs/polsci5.pdf" download>SEMESTER V</a>
+      <a class="semester-link" href="/pdfs/polsci6.pdf" download>SEMESTER VI</a>
+    </div>
+  </div>
+
+</body>
+</html>

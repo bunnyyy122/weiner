@@ -6422,3 +6422,13 @@ dialog :link{
 #download {
   display: none !important;
 }
+body, * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+img {
+  pointer-events: none;
+}

@@ -702,10 +702,7 @@ See https://github.com/adobe-type-tools/cmap-resources
         </div>
       </dialog>
 
-        <dialog id="printServiceDialog" style="min-width: 200px;">
-          <div class="row">
-            <span data-l10n-id="pdfjs-print-progress-message"></span>
-          </div>
+        
           <div class="row">
             <progress value="0" max="100"></progress>
             <span data-l10n-id="pdfjs-print-progress-percent" data-l10n-args='{ "progress": 0 }' class="relative-progress">0%</span>
@@ -771,24 +768,42 @@ See https://github.com/adobe-type-tools/cmap-resources
         }
       </style>
       <script>
-        // Disable right-click
+        // Disable right-click menu
         document.addEventListener('contextmenu', function (e) {
           e.preventDefault();
         });
 
-        // Disable text/image copy and print-related shortcuts
+        // Disable common shortcuts: Ctrl+P, Ctrl+U, Ctrl+S, Ctrl+Shift+I, F12, etc.
         document.addEventListener('keydown', function (e) {
-          const blockedKeys = ['c', 'u', 's', 'a', 'p'];  // p = Print
+          const key = e.key.toLowerCase();
 
-          if ((e.ctrlKey || e.metaKey) && blockedKeys.includes(e.key.toLowerCase())) {
+          // Block Ctrl+P, Ctrl+S, Ctrl+U, Ctrl+C, Ctrl+A, etc.
+          if ((e.ctrlKey || e.metaKey) && ['p', 's', 'u', 'c', 'a'].includes(key)) {
             e.preventDefault();
+            alert('This action is disabled.');
           }
 
-          // Specifically block Ctrl+P and Cmd+P
-          if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'p') {
+          // Block Ctrl+Shift+I or Ctrl+Shift+C or Ctrl+Shift+J
+          if ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i', 'c', 'j'].includes(key)) {
             e.preventDefault();
-            alert("Printing is disabled on this page.");
+            alert('Developer tools are disabled.');
           }
+
+          // Block F12
+          if (e.keyCode === 123) {
+            e.preventDefault();
+            alert('F12 is disabled.');
+          }
+        });
+
+        // Optional: Disable drag to prevent image dragging
+        document.addEventListener('dragstart', function (e) {
+          e.preventDefault();
+        });
+
+        // Optional: Disable text selection
+        document.addEventListener('selectstart', function (e) {
+          e.preventDefault();
         });
       </script>
 

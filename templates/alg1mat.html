@@ -104,7 +104,9 @@
     <div class="section">
       <h2>IMPORTANT NOTES</h2>
       <ul>
-        <li>(<a href="/static/notes/alg1notes.pdf" target="_blank">Download Notes</a>)</li>
+        <li><a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='notes/alg1notes.pdf') }}" target="_blank">
+          View Secure PDF
+        </a></li>
       </ul>
 
       <h2>CHEATING SHEATING SHEET</h2>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="refresh" content="3600; url=/" />
   <meta charset="UTF-8">
   <title>Microeconomics Resources</title>
   <style>
@@ -12,7 +13,23 @@
       background-size: 1780px 800px;
       color: rgb(249, 246, 238);
     }
+    .file-reference {
+      /* Change the color */
+      color: blue;
 
+      /* Change the font */
+      font-family: Arial, sans-serif;
+
+      /* Adjust the size */
+      font-size: 14px;
+
+      /* Add other styles as needed */
+      font-weight: bold;
+      text-decoration: underline;
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
     body::after {
       content: "";
       position: fixed;
@@ -97,7 +114,7 @@
         <li><strong>QP-1</strong><br><a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='qps/alg1qp1.pdf') }}" target="_blank">
           View PDF
         </a></li>
-        <li><strong>QP-2</strong><br><a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='qps/alg2qp1.pdf') }}" target="_blank">
+        <li><strong>QP-2</strong><br><a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='qps/alg1qp2.pdf') }}" target="_blank">
           View PDF
         </a></li>
         <li><strong>SOL-1</strong><br><a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='sol/alg1qp1sol.pdf') }}" target="_blank">
@@ -123,5 +140,14 @@
       </p>
     </div>
   </div>
+  <script>
+  // Block direct .html access
+  if(window.location.pathname.endsWith('.html') && 
+     !['/syllabus.html', '/timewaste.html'].includes(window.location.pathname)) {
+
+     // Redirect to login with subject parameter
+     window.location.href = `/login/${subject}`;
+  }
+  </script>
 </body>
 </html>

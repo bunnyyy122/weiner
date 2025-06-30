@@ -215,5 +215,63 @@
     </div>
   </div>
   </div>
+
+  <!-- Admin Note Section -->
+  <section style="background: rgba(0,0,0,0.6); color: biege; padding: 20px; margin-top: 40px;">
+    <h2 style="text-align: center; font-size: 30px; color: lightgreen;">A Note from Admin</h2>
+    <p style="font-size: 20px; text-align: center;  color: biege; word-spacing: 2px; max-width: 800px; margin: auto;">
+      Hey slacker! How are you ,i know agar yha pauch gye ho to thik nhi hoge, pr fikar mat kro, aab thik ho jaoge , ye website maine tum sab ke lie hi banai hai , mai khud tumhari tarah ek student hu , aur sabko pareshaani me dekhta hu , to maine socha kyu na help kr di jaye. Piracy aur hate ke bajaye , ham milkar is website ko students ka one stop solution banayenge , to agr kuch bhi galti ho content me , ya koi suggestion ho , to niche suggestion box me likh do. Mai hu na ~
+    </p>
+  </section>
+
+  <!-- Suggestion Box Section -->
+  <section style="background: rgba(255,255,255,0.95); padding: 30px; margin: 40px auto; max-width: 700px; border-radius: 20px; color: black; font-family: 'Segoe UI', sans-serif; line-height: 1.8; word-spacing: 2px;">
+    <h2 style="text-align: center; font-size: 24px;">Suggestion Box</h2>
+    <form id="suggestionForm" onsubmit="submitToDiscord(); return false;">
+
+      <label for="course" style="display: block; margin-top: 20px; font-weight: bold;">Course:</label>
+      <input type="text" id="course" name="course" required style="width: 100%; padding: 10px; font-size: 16px; color: black;">
+
+      <label for="subject" style="display: block; margin-top: 20px; font-weight: bold;">Subject:</label>
+      <input type="text" id="subject" name="subject" required style="width: 100%; padding: 10px; font-size: 16px; color: black;">
+
+      <label for="description" style="display: block; margin-top: 20px; font-weight: bold;">Description:</label>
+      <textarea id="description" name="description" required rows="4" style="width: 100%; padding: 10px; font-size: 16px; color: black;"></textarea>
+
+      <button type="submit" style="margin-top: 25px; width: 100%; padding: 12px; background: black; color: white; border: none; border-radius: 10px; font-size: 16px; letter-spacing: 1px;">
+        Submit
+      </button>
+    </form>
+  </section>
+
+
+  <script>
+  function submitToDiscord() {
+    const course = document.getElementById("course").value;
+    const subject = document.getElementById("subject").value;
+    const description = document.getElementById("description").value;
+
+    const msg = `📥 New Suggestion:\n📚 Course: ${course}\n📖 Subject: ${subject}\n📝 Description: ${description}`;
+
+    const webhookURL = "https://discord.com/api/webhooks/1389183848088338482/P9vS4FCmOCjkgDSsx-AApHa72P2L-9rPY4fFqFzdBA7-J0oQpsOixVKWJtyW1eHpS-W1";
+
+    fetch(webhookURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ content: msg })
+    })
+    .then(() => {
+      alert("✅ Suggestion recorded successfully!");
+      
+    })
+    .catch(() => {
+      alert("❌ Something went wrong. Please try again later.");
+    });
+  }
+</script>
+
+
 </body>
 </html>

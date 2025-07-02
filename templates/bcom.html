@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eco Hons | Gen Z Course Guide</title>
   <style>
     body {
@@ -10,9 +10,10 @@
       padding: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
       background: url('/static/background.png') no-repeat center center fixed;
-      background-size: 1780px 800px;;
+      background-size: cover;
       color: #fff;
       position: relative;
+      min-height: 100vh;
     }
 
     body::after {
@@ -20,34 +21,34 @@
       position: fixed;
       top: 0;
       left: 0;
-      height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* dark layer for contrast */
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
       z-index: -1;
     }
 
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 1100px;
+      margin: auto;
       padding: 40px 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
       gap: 30px;
+      justify-content: space-between;
     }
 
-    .subjects, .description {
-      flex: 1;
-      min-width: 300px;
+    .subjects,
+    .description {
+      flex: 1 1 300px;
     }
 
-    .subjects h2, .description h2 {
+    h2 {
       font-size: 2rem;
       margin-bottom: 10px;
       text-shadow: 2px 2px 5px #000;
     }
 
-    .subjects h3 {
+    h3 {
       margin-top: 30px;
       font-size: 1.5rem;
       text-shadow: 2px 2px 5px #000;
@@ -55,18 +56,39 @@
 
     ul, ol {
       margin-left: 20px;
-      padding-left: 10px;
+      padding-left: 15px;
     }
 
     li {
       margin-bottom: 10px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       line-height: 1.6;
       text-shadow: 1px 1px 3px #000;
+      margin-top: 10px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s, text-decoration 0.2s;
+    }
+
+    a:visited {
+      color: #ffc0cb;
+    }
+
+    a:hover {
+      color: mintcream;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: yellow;
     }
 
     strong {
@@ -81,61 +103,47 @@
       .container {
         flex-direction: column;
         align-items: center;
+        padding: 20px;
       }
 
-      .subjects, .description {
+      .subjects,
+      .description {
+        width: 100%;
         text-align: center;
       }
-    }
-    a:link {
-      color: white;
-      background-color: transparent;
-      text-decoration: none;
-    }
 
-    a:visited {
-      color: pink;
-      background-color: transparent;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: mintcream;
-      background-color: transparent;
-      text-decoration: underline;
-    }
-
-    a:active {
-      color: yellow;
-      background-color: transparent;
-      text-decoration: underline;
+      ul, ol {
+        text-align: left;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Subjects Section -->
     <div class="subjects">
       <h2>SUBJECTS</h2>
       <h3>SEMESTER - I</h3>
       <ul>
-        <li> <a href="{{ url_for('login', subject='fin1') }}">Financial Accounting</a></li>
-        <li> <a href="{{ url_for('login', subject='bus1') }}">Business Laws</a></li>
-        <li> <a href="{{ url_for('login', subject='man1') }}">Management Principles and Applications</a></li>
+        <li><a href="{{ url_for('login', subject='fin1') }}">Financial Accounting</a></li>
+        <li><a href="{{ url_for('login', subject='bus1') }}">Business Laws</a></li>
+        <li><a href="{{ url_for('login', subject='man1') }}">Management Principles and Applications</a></li>
       </ul>
 
       <h3>SEMESTER - II</h3>
       <ul>
-        <li> <a href="{{ url_for('login', subject='cor2') }}"> Corporate Accounting </a> </li> 
-        <li> <a href="{{ url_for('login', subject='law2') }}">Corporate Laws (Company Law)</a></li>
-        <li> <a href="{{ url_for('login', subject='hum2') }}">Human Resource Management</a></li>
+        <li><a href="{{ url_for('login', subject='cor2') }}">Corporate Accounting</a></li>
+        <li><a href="{{ url_for('login', subject='law2') }}">Corporate Laws (Company Law)</a></li>
+        <li><a href="{{ url_for('login', subject='hum2') }}">Human Resource Management</a></li>
       </ul>
 
       <p><strong>MORE COMING SOON~</strong></p>
     </div>
 
+    <!-- Description Section -->
     <div class="description">
       <h2>DESCRIPTION</h2>
-      <p><em>Dekh bhai per subject charge 69/- hai jisme tujhe:</em></p>
+      <p><em>Dekh bhai per subject charge 85/- hai jisme tujhe:</em></p>
       <ol>
         <li>2 Past Year With Solutions</li>
         <li>Important Notes</li>
@@ -148,9 +156,9 @@
       <p>
         Interested ho to <strong>9599191182</strong> is no. <br>
         Pr payment, screenshot aur subject ka naam likh kr bhej de. <br>
-        1 ghante ke andar andar Login credentials tujhe mil jayenge...
+        1 ghante ke andar andar login credentials tujhe mil jayenge...
       </p>
-      <p><strong>GOOD LUCK. MERE YAAR, TU KR LEGA~</strong></p>
+      <p><strong>GOOD LUCK MERE YAAR, TU KR LEGA~</strong></p>
     </div>
   </div>
 </body>

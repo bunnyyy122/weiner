@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#9b5de5" />
   <title>Login</title>
   <style>
     body {
@@ -10,7 +11,7 @@
       padding: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
       background: url('/static/background.png') no-repeat center center fixed;
-      background-size: 1780px 800px;
+      background-size: cover;
       color: #fff;
     }
 
@@ -26,16 +27,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 20px;
     }
 
     .login-box {
       background-color: rgba(255, 255, 255, 0.1);
-      padding: 30px;
+      padding: 30px 25px;
       border-radius: 15px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(12px);
-      width: 350px;
+      width: 100%;
+      max-width: 360px;
       text-align: center;
     }
 
@@ -47,7 +50,7 @@
     }
 
     .login-box input {
-      width: 95%;
+      width: 100%;
       padding: 12px;
       margin: 10px 0;
       border: none;
@@ -56,7 +59,7 @@
     }
 
     .login-box button {
-      width: 101%;
+      width: 100%;
       padding: 12px;
       background: linear-gradient(to right, #9b5de5, #d000f7);
       color: white;
@@ -65,12 +68,22 @@
       font-weight: bold;
       font-size: 1rem;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: background 0.3s ease;
       margin-top: 10px;
     }
 
     .login-box button:hover {
       background: linear-gradient(to right, #7a40c2, #a000d0);
+    }
+
+    @media (max-width: 400px) {
+      .login-box {
+        padding: 25px 20px;
+      }
+
+      .login-box h2 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>

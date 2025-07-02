@@ -10,62 +10,60 @@
       padding: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
       background: url('/static/background.png') no-repeat center center fixed;
-      background-size: 1780px 800px;;
+      background-size: cover;
       color: #000;
     }
 
     .syllabus-container {
-      padding: 60px 20px;
+      padding: 4rem 1rem;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       flex-wrap: wrap;
-      gap: 50px;
+      gap: 2rem;
     }
 
     .column {
-      background: rgba(245, 245, 220, 0.8);
-      padding: 30px 40px;
+      flex: 1 1 260px;
+      background: rgba(245, 245, 220, 0.85);
+      padding: 2rem;
       border-radius: 20px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-      width: 220px;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .column:hover {
       transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
     }
 
     .column h3 {
-      margin-bottom: 20px;
-      font-size: 20px;
+      margin-bottom: 1.2rem;
+      font-size: 1.2rem;
       text-decoration: underline;
     }
 
     .semester-link {
       display: block;
-      margin: 12px 0;
+      margin: 0.6rem 0;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 1.05rem;
       text-decoration: none;
-      color: black;
-      transition: color 0.3s ease;
+      color: #000;
+      transition: color 0.25s ease;
     }
 
-    .semester-link:hover {
+    .semester-link:hover,
+    .semester-link:focus {
       color: #9b5de5;
       text-decoration: underline;
     }
 
     @media screen and (max-width: 768px) {
-      .syllabus-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
       .column {
-        width: 80%;
+        width: 100%;
+        max-width: 500px;
       }
     }
   </style>
@@ -73,8 +71,9 @@
 <body>
 
   <div class="syllabus-container">
+
     <div class="column">
-      <h3>ECO HONS:-</h3>
+      <h3>ECO HONS</h3>
       <a class="semester-link" href="/static/sy/ecosem1sy.pdf" download>SEMESTER I</a>
       <a class="semester-link" href="/static/sy/ecosem2sy.pdf" download>SEMESTER II</a>
       <a class="semester-link" href="/static/sy/ecosem3sy.pdf" download>SEMESTER III</a>
@@ -82,7 +81,7 @@
     </div>
 
     <div class="column">
-      <h3>BCOM HONS:-</h3>
+      <h3>BCOM HONS</h3>
       <a class="semester-link" href="/static/sy/bcomsem1sy.pdf" download>SEMESTER I</a>
       <a class="semester-link" href="/static/sy/bcomsem2sy.pdf" download>SEMESTER II</a>
       <a class="semester-link" href="/static/sy/bcomsem3sy.pdf" download>SEMESTER III</a>
@@ -92,7 +91,7 @@
     </div>
 
     <div class="column">
-      <h3>PHYSICS HONS:-</h3>
+      <h3>PHYSICS HONS</h3>
       <a class="semester-link" href="/static/sy/physem1sy.pdf" download>SEMESTER I</a>
       <a class="semester-link" href="/static/sy/physem2sy.pdf" download>SEMESTER II</a>
       <a class="semester-link" href="/static/sy/physem3sy.pdf" download>SEMESTER III</a>
@@ -102,7 +101,7 @@
     </div>
 
     <div class="column">
-      <h3>MATHS HONS:-</h3>
+      <h3>MATHS HONS</h3>
       <a class="semester-link" href="/static/sy/matsem1sy.pdf" download>SEMESTER I</a>
       <a class="semester-link" href="/static/sy/matsem2sy.pdf" download>SEMESTER II</a>
       <a class="semester-link" href="/static/sy/matsem3sy.pdf" download>SEMESTER III</a>
@@ -112,7 +111,7 @@
     </div>
 
     <div class="column">
-      <h3>POL.SCI HONS:-</h3>
+      <h3>POL.SCI HONS</h3>
       <a class="semester-link" href="/static/sy/polsem1sy.pdf" download>SEMESTER I</a>
       <a class="semester-link" href="/static/sy/polsem2sy.pdf" download>SEMESTER II</a>
       <a class="semester-link" href="/static/sy/polsem3sy.pdf" download>SEMESTER III</a>
@@ -120,6 +119,7 @@
       <a class="semester-link" href="/static/sy/polsem5sy.pdf" download>SEMESTER V</a>
       <a class="semester-link" href="/static/sy/polsem6sy.pdf" download>SEMESTER VI</a>
     </div>
+
   </div>
 
 </body>

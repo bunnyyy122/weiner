@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, session
+from flask import Flask, request, render_template, redirect, session 
 from sqlalchemy import create_engine, text
 
 app = Flask(__name__)

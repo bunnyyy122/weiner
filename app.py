@@ -61,6 +61,10 @@ def tmw():
 def syl():
         return render_template('syllabus.html')
 
+@app.route('/soon.html', methods=['GET', 'POST'])
+def soon():
+        return render_template('soon.html')
+
 if __name__ == "__main__":
         app.run(debug=True, host="0.0.0.0", port=5000)
         # app.run(debug=True)

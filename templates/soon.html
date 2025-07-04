@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slackerspot | Coming Soon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .rounded-border { border: 4px solid #2d2d2d; border-radius: 30px; }
+  </style>
+</head>
+<body class="bg-white flex items-center justify-center min-h-screen px-4">
+
+  <div class="rounded-border max-w-md w-full bg-[#f8f8ff] overflow-hidden shadow-xl">
+    <!-- Header -->
+    <div class="flex justify-between items-center px-4 pt-4">
+      <h1 class="text-gray-800 font-bold text-xl">ѕℓα¢кєяѕρσт</h1>
+      <div class="space-x-3 text-lg">
+        <a href="https://instagram.com" target="_blank" class="text-gray-600 hover:text-black"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank" class="text-gray-600 hover:text-black"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" class="text-gray-600 hover:text-black"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- Illustration -->
+    <div class="flex justify-center mt-4 px-4">
+      <img src="/static/logo.png" alt="Slackerspot Logo" class="w-full max-w-xs"/>
+    </div>
+
+    <!-- Content -->
+    <div class="bg-[#dfe4ff] text-center py-10 px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 leading-relaxed">
+        One Stop Solution for All Student Needs…..
+        <br>- Past year with solutions
+        <br>- Notes
+        <br>- And much more
+        <br><strong>Just Under ₹99/-</strong>
+      </h2>
+
+      <p class="text-md mt-4 text-gray-600">- Coming Soon - <br>Early birds will get special discount</p>
+
+      <!-- Form -->
+      <form onsubmit="submitPhone(event)" class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2">
+        <input id="phoneInput" type="tel" placeholder="Enter your phone number"
+               class="w-full sm:w-64 px-4 py-2 rounded-full border border-gray-300 focus:outline-none" required>
+        <button type="submit" class="bg-purple-700 hover:bg-purple-800 text-white px-6 py-2 rounded-full transition">
+          Submit
+        </button>
+      </form>
+
+      <p class="text-md mt-4 text-gray-600">Together we build a strong community.</p>
+    </div>
+  </div>
+
+  <script>
+    async function submitPhone(event) {
+      event.preventDefault(); // Prevent form reload
+      const phone = document.getElementById("phoneInput").value.trim();
+
+      if (!phone) {
+        alert("Please enter your phone number");
+        return;
+      }
+
+      const webhookURL = "https://discord.com/api/webhooks/1389760103430881431/exWJv5mW6XVNtBGQuRQUIf_2Wq7lUK0Hmo6dehWHbvzZ-1fYEvuHwpQ0iXdGT9c27eIP";
+      const data = {
+        content: `📱 New phone number submitted: ${phone}`
+      };
+
+      try {
+        await fetch(webhookURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+      } catch (error) {
+        console.error("Error sending to Discord:", error);
+      }
+
+      // Redirect to WhatsApp group
+      const whatsappLink = "https://chat.whatsapp.com/IjS2t5qxAEzLj5mklkIjYj?mode=r_c";
+      window.location.href = whatsappLink;
+    }
+  </script>
+</body>
+</html>

@@ -64,6 +64,10 @@ def syl():
 @app.route('/soon.html', methods=['GET', 'POST'])
 def soon():
         return render_template('soon.html')
+        
+@app.route('/formula.html', methods=['GET', 'POST'])
+def forf():
+        return render_template('formula.html')
 
 if __name__ == "__main__":
         app.run(debug=True, host="0.0.0.0", port=5000)

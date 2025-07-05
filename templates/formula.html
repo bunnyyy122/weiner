@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('/static/background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+    }
+
+    .formulallabus-container {
+      padding: 4rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .column {
+      flex: 1 1 260px;
+      background: rgba(245, 245, 220, 0.85);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .column h3 {
+      margin-bottom: 1.2rem;
+      font-size: 1.2rem;
+      text-decoration: underline;
+    }
+
+    .semester-link {
+      display: block;
+      margin: 0.6rem 0;
+      font-weight: bold;
+      font-size: 1.05rem;
+      text-decoration: none;
+      color: #000;
+      transition: color 0.25s ease;
+    }
+
+    .semester-link:hover,
+    .semester-link:focus {
+      color: #9b5de5;
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      .column {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="syllabus-container">
+
+    <div class="column">
+      <h3>ECO HONS</h3>
+      <a class="semester-link" href="/static/formula/stats1for.pdf" download>Statistics Semester I</a>
+      <a class="semester-link" href="/static/formula/ecosem2formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/ecosem3formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/ecosem456formula.pdf" download></a>
+    </div>
+
+    <div class="column">
+      <h3>BCOM HONS</h3>
+      <a class="semester-link" href="/static/formula/fin1for.pdf" download>Financial Semester i</a>
+      <a class="semester-link" href="/static/formula/bcomsem2formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/bcomsem3formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/bcomsem4formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/bcomsem5formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/bcomsem6formula.pdf" download></a>
+    </div>
+
+    <div class="column">
+      <h3>PHYSICS HONS</h3>
+      <a class="semester-link" href="/static/formula/mat1for.pdf" download>Mathematical Physics I</a>
+      <a class="semester-link" href="/static/formula/meh1for.pdf" download>Mechanics</a>
+      <a class="semester-link" href="/static/formula/wav1for.pdf" download>Waves and Oscillation</a>
+      <a class="semester-link" href="/static/formula/physem4formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/physem5formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/physem6formula.pdf" download></a>
+    </div>
+
+    <div class="column">
+      <h3>MATHS HONS</h3>
+      <a class="semester-link" href="/static/formula/ele1for.pdf" download>Elementary Real Analysis I</a>
+      <a class="semester-link" href="/static/formula/alg1for.pdf" download>Algebra I</a>
+      <a class="semester-link" href="/static/formula/pro1for.pdf" download>Probability and Statistics</a>
+      <a class="semester-link" href="/static/formula/matsem4formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/matsem5formula.pdf" download></a>
+      <a class="semester-link" href="/static/formula/matsem6formula.pdf" download></a>
+    </div>
+
+    
+
+  </div>
+
+</body>
+</html>

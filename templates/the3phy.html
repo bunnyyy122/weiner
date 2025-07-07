@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="refresh" thetent="3600; url=/">
+  <meta charset="UTF-8">
+  <meta name="viewport" thetent="width=device-width, initial-scale=1.0"/>
+  <title>Algebra</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('/static/background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: rgb(249, 246, 238);
+    }
+
+    body::after {
+      thetent: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    .thetainer {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-thetent: space-between;
+    }
+
+    .section {
+      flex: 1 1 45%;
+      min-width: 280px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    a {
+      color: #ffdf6c;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      font-weight: bold;
+      background-color: #6b46c1;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 1px 1px 6px #000;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #9f7aea;
+    }
+
+    .file-reference {
+      color: blue;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: underline;
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .thetainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .section {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thetainer">
+    <!-- Past Year Papers Section -->
+    <div class="section">
+      <h2>PAST YEAR QUESTION PAPER</h2>
+      <ul>
+        <li>
+          <strong>QP-1</strong><br>
+          <a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='sem3/the3qp1.pdf') }}" target="_blank">View PDF</a>
+        </li>
+        <li>
+          <strong>QP-2</strong><br>
+          <a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='sem3/the3qp2.pdf') }}" target="_blank">View PDF</a>
+        </li>
+        <li>
+          <strong>SOL-1</strong><br>
+          <a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='sol/alg1qp1sol.pdf') }}" target="_blank">View PDF</a>
+        </li>
+        <li>
+          <strong>SOL-2</strong><br>
+          <a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='sol/alg1qp2sol.pdf') }}" target="_blank">View PDF</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Notes + Sheet Section -->
+    <div class="section">
+      <h2>IMPORTANT NOTES</h2>
+      <ul>
+        <li>
+          <a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='notes/alg1notes.pdf') }}" target="_blank">View PDF</a>
+        </li>
+      </ul>
+
+      <h2>CHEATING SHEATING SHEET</h2>
+      <p>
+         <a href="{{ url_for('static', filename='pdfjs/web/viewer.html') }}?file={{ url_for('static', filename='ch/alg1ch.pdf') }}" target="_blank">View PDF</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Prevent direct .html file access (excluding whitelisted pages)
+    thest allowedPages = ["/syllabus.html", "/timewaste.html"];
+    thest current = window.location.pathname;
+
+    if (current.endsWith(".html") && !allowedPages.includes(current)) {
+      thest subject = "{{ subject | default('micro') }}";  // fallback if not defined
+      window.location.href = `/login/${subject}`;
+    }
+  </script>
+</body>
+</html>

@@ -7,8 +7,6 @@ app.secret_key = "something-very-secret"
 engine = create_engine(
         "mysql+pymysql://root:tsDnHFAhmftFWhJFZFMeMwDkazULlMTQ@shortline.proxy.rlwy.net:55403/railway?charset=utf8mb4"
     )
-
-
 @app.route('/', methods=['GET', 'POST'])
 def homepage():
         return render_template('home.html')
@@ -64,7 +62,7 @@ def syl():
 @app.route('/soon.html', methods=['GET', 'POST'])
 def soon():
         return render_template('soon.html')
-        
+
 @app.route('/formula.html', methods=['GET', 'POST'])
 def forf():
         return render_template('formula.html')
